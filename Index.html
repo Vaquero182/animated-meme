@@ -1,0 +1,572 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>Cursos</title>
+		<meta charset="utf-8" />
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/themes/interface-chida.min.css" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="js/jquery.mobile.structure-1.4.5.min.css" /> 
+		<script src="js/jquery-1.11.1.js"></script> 
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>	
+
+		<h1>
+			Aplicación sobre cursos
+		</h1>
+		<!-- página principal-->
+		<div id="principal" data-role="page" data-theme="b">
+			<!-- -->
+				<div data-role="panel" id="menucurso">
+					<div data-role="collapsible">
+						<h2>Registros \(^-^)/</h2>
+						<ul data-role="listview">
+							<li>
+								<a href="#registra_Estados" data-role="button" data-inline="true">Estados :3</a>
+							</li>
+							<li>
+								<a href="#registra_Contactos" data-role="button" data-inline="true" >Contactos uwu</a>
+							</li>
+							<li>
+								<a href="#registra_Ponentes" data-role="button" data-inline="true" >Ponentes 7u7</a> 
+							</li>
+							<li>
+								<a href="#registra_Sedes" data-role="button" data-inline="true" >Sedes ^-^</a>
+							</li>
+							<li>
+								<a href="#registra_Persona" data-role="button" data-inline="true" >Personitas ^w^</a>
+							</li>
+							<li>
+								<a href="#registra_Cursos" data-role="button" data-inline="true" >Cursos chidos :v</a>
+							</li>
+						</ul>
+					</div>	
+					<div data-role="collapsible">
+						<h2>Consultar :T</h2>
+						<ul data-role="listview">
+							<li>
+								<a href="#view_ins" data-role="button" data-inline="true" onclick="mostrarInscritos();">Inscritos XD</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			<!-- -->
+			<div data-role="header">
+				<h1>C U R S O S :v</h1>
+				
+			</div>
+			<div data-role="content">
+			<!--<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#registra_Estados" data-role="button" data-inline="true">Estados</a>
+						</li>
+						<li>
+							<a href="#registra_Contactos" data-role="button" data-inline="true" >Contactos</a>
+						</li>
+						<li>
+							<a href="#registra_Ponentes" data-role="button" data-inline="true" >Ponentes</a> 
+						</li>
+						<li>
+							<a href="#registra_Sedes" data-role="button" data-inline="true" >Sedes</a>
+						</li>
+						<li>
+							<a href="#registra_Persona" data-role="button" data-inline="true" >Personas</a>
+						</li>
+						<li>
+							<a href="#registra_Cursos" data-role="button" data-inline="true" >Cursos</a>
+						</li>
+					</ul>
+			</div>-->
+			<a href="#menucurso" data-role="button" data-inline="true" >Menu</a>
+				
+			</div>
+		</div>
+
+
+	<!-- Esto es para registrar estados!-->
+	<div id="registra_Estados" data-role="page" data-theme="a">
+			<div data-role="header">
+				<h1>Estados :3</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-role="button" data-iconpos="notext"> </a>
+			</div>
+			<!-- Seecion del cuerpo de una página -->
+			<div data-role="content">
+			
+
+				<form id="formEstados">
+					<div data-rol="fieldcontain">
+						<label for="nombreEstado">
+							Nombre:
+						</label>
+						<!-- Hay algunas etiquetas que se pueden cerrar en la misma linea de código -->	
+						
+						<input type="text" id="nombreEstado" name="nombreEstado" placeholder="Introduce el nombre del estado"/>
+						<a href="#registra_Contactos" data-role="button" data-icon="check" data-iconpos="notext" data-inline="true" id="btnInsertaEstado">Insertar</a>	
+							
+						
+						
+					</div>
+				
+				</form>
+			</div>
+			
+			<div data-role="footer" data-position="fixed">
+				<h2>Derechos Reservados - 2018</h2>
+			</div>
+			
+		</div>
+		
+		<!-- Página de Registros Contactos-->
+		<div id="registra_Contactos" data-role="page" data-theme="b">
+			<div data-role="header">
+				<h1>Contactos uwu</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-role="button" data-iconpos="notext"> </a>
+			</div>
+			<!-- Seecion del cuerpo de una página -->
+			<div data-role="content">
+				<form id="formContacto">
+					<div data-rol="fieldcontain">
+						<label for="nombreContacto">Contacto:</label>
+						<input type="text" id="nombreContacto" name="nombreContacto" placeholder="Introduce el nombre del Contacto"/>
+						
+						<label for="apellidosContacto">Apellidos:</label>
+						<input type="text" id="apellidosContacto" name="apellidosContacto" placeholder="Introduce el Apellido(s)"/>
+
+						<label for="emailContacto">Email:</label>
+						<input type="text" id="emailContacto" name="emailContacto" placeholder="Introduce el Email"/>
+
+						<a href="#registra_Ponentes" data-role="button" data-icon="check" data-iconpos="notext" data-inline="true" id="btnInsertaContacto">Insertar</a>	
+							
+						
+						
+					</div>
+				
+				</form>
+			</div>
+			
+			<div data-role="footer" data-position="fixed">
+				<h2>Derechos Reservados - 2018</h2>
+			</div>			
+		</div>
+
+		<!--Página de Registros Ponentes-->
+		<div id="registra_Ponentes" data-role="page" data-theme="b">
+			<div data-role="header">
+				<h1>Ponentes 7u7</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-role="button" data-iconpos="notext"> </a>
+			</div>
+			<!-- Seecion del cuerpo de una página -->
+			<div data-role="content">
+				<form id="formPonente">
+					<div data-rol="fieldcontain">
+						<label for="nombrePonente">Ponente:</label>
+						<input type="text" id="nombrePonente" name="nombrePonente" placeholder="Introduce el nombre del Ponente"/>
+						
+						<label for="apellidosPonente">Apellidos:</label>
+						<input type="text" id="apellidosPonente" name="apellidosPonente" placeholder="Introduce el Apellido(s)"/>
+
+						<label for="gradoPonente">Grado de estudios:</label>
+						<input type="text" id="gradoPonente" name="gradoPonente" placeholder="Introduce el máximo grado de estudios"/>
+
+						<label for="origenPonente">Lugar de Origen:</label>
+						<input type="text" id="origenPonente" name="origenPonente" placeholder="Introduce el lugar de origen"/>
+
+						<a href="#registra_Sedes" data-role="button" data-icon="check" data-iconpos="notext" data-inline="true" id="btnInsertaPonente">Insertar</a>	
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h2>Derechos Reservados - 2018</h2>
+			</div>
+		</div>
+
+		<!--Página de Registro de Sedes-->
+		<div data-role="page" id="registra_Sedes">
+			<div data-role="header">
+				<h1>Sedes ^-^</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-iconpos="notext">Sedes</a>
+			</div>
+
+			<div data-role="content">
+				<form id="formSedes">
+					<div data-role="fieldcontaint">
+						<label for="lugarSede">Lugar:</label>
+						<input type="text" id="lugarSede" name="lugarSede" placeholder="Nombre del Lugar..." />
+						
+						<label for="contactoSede">Contacto:</label>
+						<select id="contactoSede"> 
+							<!--<option id="1">Contacto 1 uwu</option>
+							<option value="2">Los memes</option>
+							<option value="3">Hi there</option>-->
+						</select>
+
+						<label for="estadoSede">Estado: <label>
+						<select id="estadoSede">
+							
+						</select>
+						<a href="#registra_Persona" data-icon="plus" data-iconpos="left" data-inline="true" data-role="button" id="btnInsertaSede">Registrar</a>
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h2>Derechos Reservados - 2018</h2>
+			</div>
+		</div>
+
+		<!--Registro de Personas XD-->
+		<div data-role="page" id="registra_Persona">
+			<div data-role="header">
+				<h1>Personitas ^w^</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-iconpos="notext">Personas</a>
+			</div>
+
+			<div data-role="content">
+				<form id="formPersonas">
+					<div data-role="fieldcontaint">
+						<label for="nombrePersona">Nombre:</label>
+						<input type="text" id="nombrePersona" name="nombrePersona" placeholder="Nombre de la persona..." />
+						
+						<label for="apellidosPersona">Apellidos:</label>
+						<input type="text" id="apellidosPersona" name="apellidosPersona" placeholder="Apellidos de la persona..." />
+						
+						<label for="direccionPersona">Dirección:</label>
+						<input type="text" id="direccionPersona" name="direccionPersona" placeholder="Dirección..." />
+						
+						<label for="CorreoPersona">Correo:</label>
+						<input type="text" id="CorreoPersona" name="CorreoPersona" placeholder="Correo..." />
+						
+						<label for="telefonoPersonas">Teléfono:</label>
+						<input type="text" id="telefonoPersonas" name="telefonoPersonas" placeholder="Teléfono..." />
+						
+						<label for="cursoPersona">Curso:</label>
+						<select id="cursoPersona"> 
+							<option value="1"></option>
+						</select>
+
+						<a href="#registra_Cursos" data-icon="plus" data-iconpos="left" data-inline="true" data-role="button">Registrar</a>
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h2>Derechos Reservados - 2018</h2>
+			</div>
+		</div>
+
+		<!--Registro de cursos XD-->
+		<div data-role="page" id="registra_Cursos" data-theme="b">
+			<div data-role="header">
+				<h1>Cursos Chidos :v</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-iconpos="notext">Cursos</a>
+			</div>
+
+			<div data-role="content">
+				<form id="formCursos">
+					<div data-role="fieldcontaint">
+						<label for="nombreCurso">Nombre:</label>
+						<input type="text" id="nombreCurso" name="nombreCurso" placeholder="Nombre del curso..." />
+						
+						<label for="duracionCurso">Duración:</label>
+						<input type="text" id="duracionCurso" name="duracionCurso" placeholder="Duración del curso..." />
+						
+						<label for="fechaINICur">Inicio:</label>
+						<input type="date" id="fechaINICur" name="fechaINICur" placeholder="Fecha de inicio..." />
+						
+						<label for="fechaFINCur">Final:</label>
+						<input type="date" id="fechaFINCur" name="fechaFINCur" placeholder="Fecha de finalización..." />
+						
+						<label for="SedeCursos">Sedes: <label>
+						<select id="SedeCursos">
+							<option value="1"></option>
+						</select>
+
+						<label for="costoCurso">Costo:</label>
+						<input type="text" id="costoCurso" name="costoCurso" placeholder="Costo del curso..." />
+						
+						<label for="ponenteCurso">Ponente:</label>
+						<select id="ponenteCurso"> 
+							<option value="1"></option>
+						</select>
+						
+						<label for="contactoCurso">Contacto:</label>
+						<select id="contactoCurso"> 
+							<option value="1"></option>
+						</select>
+
+						<a href="#" data-icon="plus" data-iconpos="left" data-inline="true" data-role="button">Registrar</a>
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h2>Derechos Reservados - 2018</h2>
+			</div>
+		</div>
+
+		<!--Consultas-->
+		<div data-role="page" id="view_ins" data-theme="a">
+			<div data-role="header">
+				<h1>Inscritos owo</h1>
+				<a href="#" data-icon="arrow-l" data-rel="back" data-role="button" data-iconpos="notext"> </a>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" id="lista_Insritos"></ul>
+				<!--<li> <img class="imagenCircular" src="imagenes/User_01.png"> <h2>Programación</h2> <p> Usuario 1 Inscrito </p> <spam class="ui-li-count">ola q ace</spam></li>
+				<li> <img src="imagenes/User_02.png"> <h2>Aplicaciones Web</h2> Usuario 2 Inscrito </li>
+				<li> <img src="imagenes/User_03.jpeg"> <h2>Base de datos</h2> Usuario 3 Inscrito </li>
+				<li> <img src="imagenes/User_04.jpg"> <h2>Matemáticas</h2> Usuario 4 Inscrito </li> -->
+			</div>
+		</div>
+
+<!-- código en JavaScript -->
+
+<!-- Script para insertar Estados-->
+		<script type="text/javascript">
+			$(btnInsertaEstado).click(
+				function(){
+					if($("#nombreEstado").val() == ""){
+						alert("¡El campo debe contener datos!");
+						$("#nombreEstado").focus();
+						return;	
+					}
+					else{
+						var jsnombreEstado = document.getElementById("nombreEstado").value;
+
+						$.ajax({
+							type: 'post', 
+							url: 'http://localhost/phpcodigo/insert/Estados_insert.php',
+							data: {phpnombreEstado:jsnombreEstado},
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							crossDomain: true,
+							cache: false,
+							success: function(respuesta){
+								if (respuesta.estado=="Insertado")
+									alert("Datos insetados UuUr");
+								else
+									alert("Error de inserción :(");			
+							}
+						});
+					}
+					document.getElementById("formEstados").reset();
+					return false;
+				}
+			);
+		</script>
+
+<!-- Script para insertar Contactos-->
+		<script type="text/javascript">
+			$(btnInsertaContacto).click(
+				function(){
+					if($("#nombreContacto").val() == "" || $("#apellidosContacto").val()== "" || $("#emailContacto").val()== ""){
+						alert("¡El campo debe contener datos!");
+						$("#nombreContacto").focus();
+						return;	
+					}
+					else{
+						var jsnombreContacto = document.getElementById("nombreContacto").value;
+						var jsapellidosContacto = document.getElementById("apellidosContacto").value;
+						var jsemailContacto = document.getElementById("emailContacto").value;
+
+						$.ajax({
+							type: 'post', 
+							url: 'http://localhost/phpcodigo/insert/Contactos_insert.php',
+							data: {phpnombreContacto:jsnombreContacto, phpapellidosContacto:jsapellidosContacto, phpemailContacto:jsemailContacto},
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							crossDomain: true,
+							cache: false,
+							success: function(resultado){
+								if (resultado.contacto=="Insertado")
+									alert("Datos insetados UuUr");
+								else
+									alert("Error de inserción :(");			
+							}
+						});
+					}
+				}
+			);
+		</script>
+
+<!-- Script para insertar Ponentes-->
+		<script type="text/javascript">
+			$(btnInsertaPonente).click(
+				function(){
+				//Verificando contenido de las cajas de texto <3
+					if ($("#nombrePonente").val()== "" || $("#apellidosPonente").val()== ""|| $("#gradoPonente").val()== "" || $("origenPonente").val()== ""){
+						alert("Verifica que los campos no estés vacíos! OwO");
+						$("#nombrePonente").focus();
+						return
+					} 
+					else{
+						var jsnombrePonente = document.getElementById('nombrePonente').value;
+						var jsapellidosPonente = document.getElementById('apellidosPonente').value;
+						var jsgradoPonente = document.getElementById('gradoPonente').value;
+						var jsorigenPonente = document.getElementById('origenPonente').value;
+					
+						$.ajax({
+							type: 'post', 
+							url: 'http://127.0.0.1/phpcodigo/insert/Ponentes_insert.php',
+							data: {phpnombrePonente:jsnombrePonente, phpapellidosPonente:jsapellidosPonente, phpgradoPonente:jsgradoPonente, phporigenPonente:jsorigenPonente},
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							crossDomain: true,
+							cache: false,
+							success: function(resultado){
+								if (resultado.ponentes=="Insertado")
+									alert("Datos insetados UuUr");
+								else
+									alert("Error de inserción :(");		
+							}
+						});
+					}
+				}
+			);
+		</script>
+
+<!-- Script para insertar Sedes-->
+		<script type="text/javascript">
+			$(btnInsertaSede).click(
+				function(){
+					if ($("#lugarSede").val()== "" || $("#contactoSede").val()==0 || $("#estadoSede").val()==0 ){
+						alert("Verifica que los campos no estés vacíos! OwO");
+						
+					} 
+					else{
+						var jslugarSede= document.getElementById('lugarSede').value;
+						var jscontactoSede= document.getElementById('contactoSede').value;
+						var jsestadosSedes= document.getElementById('estadoSede').value;
+						$.ajax({
+							type: 'post', 
+							url: 'http://127.0.0.1/phpcodigo/insert/Sedes_insert.php',
+							data: {phplugarSedes:jslugarSede, phpcontactoSedes:jscontactoSede, phpestadosSedes:jsestadosSedes},
+							dataType: 'jsonp',
+							jsonp: 'jsoncallback',
+							crossDomain: 'true',
+							success: function(resultado){
+							
+								if (resultado.sede=="Insertado")
+									alert("Datos insetados UuUr");
+								else
+									alert("Error de inserción :(");		
+							}
+						});
+					}
+				}
+			);
+		</script>
+
+<!-- Script para insertar el llenado del Select a travez de INDEX-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			llenarSelects();
+		});
+	</script>
+	
+<!-- funcion que llena los Select correspondientes-->
+	<script type="text/javascript">
+		function llenarSelects(){
+		//Este AJAX es para invocar desde la tabla contactos
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Contactos_select.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$("#contactoSede").append("<option id= '0'> -- </option>");			
+					$.each(resultado, function(i,datos){
+						$("#contactoSede").append("<option value='" + datos.id_contacto + "'>"+ datos.nombre + " " + datos.apellidos + "</option>" );
+					})
+				}
+			});
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Estados_select.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$("#estadoSede").append("<option value ='0'> -- </option>");
+					$.each(resultado, function(i,datos){
+						$("#estadoSede").append("<option value='" + datos.id_estado + "'>"+ datos.nombre + " " + "</option>" );
+					});
+				}
+			});
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Cursos_select.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$.each(resultado, function(i,datos){
+						$("#cursoPersona").append("<option value='" + datos.id_curso + "'>"+ datos.nombre + " " + "</option>" );
+					});
+				}
+			});
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Sedes_select.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$.each(resultado, function(i,datos){
+						$("#SedeCursos").append("<option value='" + datos.id_sede + "'>"+ datos.lugar + " " + "</option>" );
+					});
+				}
+			});
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Ponentes_select.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$.each(resultado, function(i,datos){
+						$("#ponenteCurso").append("<option value='" + datos.id_ponente + "'>"+ datos.nombre + " " + datos.apellidos + "</option>" );
+					});
+				}
+			});	
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Contactos_select.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$.each(resultado, function(i,datos){
+						$("#contactoCurso").append("<option value='" + datos.id_contacto + "'>"+ datos.nombre + " " + datos.apellidos + "</option>" );
+					});
+				}
+			});
+		}
+
+	</script>
+
+	<!--Consultar Inscritos-->
+	<script type="text/javascript">
+		function mostrarInscritos(){
+			//traer fatos de las tablas Personas y Cursos
+			$("#lista_Insritos").empty();
+		
+			$.ajax({
+				type: 'get', 
+				url: 'http://127.0.0.1/phpcodigo/select/Consultar_Inscritos.php',
+				//Ya no se usa el DATA, CACHE ni CROSSDOMAIN, por que ya no vamos a ingresar datos
+				dataType: 'jsonp',
+				jsonp: 'jsoncallback',
+				success: function(resultado){
+					$.each(resultado, function(i,datos){
+						var li=document.createElement('li'); li.id=i;
+						li.innerHTML="<a href='#' class='ui-btn'><h2>"+datos.nombrec+'</h><p>'+datos.apellidos+'</p></a>';
+						document.getElementById("lista_Insritos").appendChild(li);
+					});
+				}
+			});
+		}
+	</script>
+
+	</body>
+</html>
